@@ -1,0 +1,23 @@
+问题描述：
+
+configure: error: 
+  ---------------------------------------------
+   The OpenSSL library that is required to
+   build git2r was not found.
+
+   Please install:
+     libssl-dev    (package on e.g. Debian and Ubuntu)
+     openssl-devel (package on e.g. Fedora, CentOS and RHEL)
+     openssl       (Homebrew package on OS X)
+   and try again.
+
+   If the OpenSSL library is installed on
+   your system but the git2r configuration
+   is unable to find it, you can specify
+   the include and lib path to OpenSSL with:
+   R CMD INSTALL --configure-args='--with-libssl-include=INCLUDE_PATH --with-libssl-lib=LIB_PATH' git2r
+  ---------------------------------------------
+  
+  解决：
+  终端输入
+  sudo apt-get install libcurl4-openssl-dev libssl-dev
